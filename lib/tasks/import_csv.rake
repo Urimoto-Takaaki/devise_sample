@@ -2,7 +2,7 @@ require 'csv'
 
 namespace :import_csv do
   desc "CSVデータをインポートする"
-
+#rake import_csv:jobs 
   task jobs: :environment do
     path = File.join Rails.root, "db/csv_data/csv_data.csv"
     list = []

@@ -1,0 +1,4 @@
+<h1>ジョブリスト一覧</h1>
+  <% @jobs.each do |job| %>
+    <p><%= job.name %>：<%= job.skill %></p>
+  <% end %>
