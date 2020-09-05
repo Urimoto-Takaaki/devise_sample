@@ -1,0 +1,7 @@
+<%= link_to "ジョブ一覧へ", jobs_path %>
+<h1>スキル一覧</h1>
+  <% @skills.each do |skill| %>
+    <p><%= skill.name %>：<%= skill.effect %></p>
+    <p><%= "#{@job.name}は#{skill.power}を与えた" %></p>
+    <!--<%= link_to "削除", skill_path(skill), method: :delete, data: {confirm: "削除しますか?"} %>-->
+  <% end %>

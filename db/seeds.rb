@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Skill.create(name: "パワーブレイク", effect: "敵の攻撃力を下げてダメージを与える", power: 40, job_id: 1)
+Skill.create(name: "地烈拳", effect: "敵グループにダメージを与える", power: 35, job_id: 2)
+Skill.create(name: "サンダー", effect: "敵グループに雷属性のダメージを与える", power: 60, job_id: 3)
+Skill.create(name: "ケアル", effect: "味方を小回復", power: 40, job_id: 4)
+Skill.create(name: "さみだれうち", effect: "敵に連続ダメージを与える", power: 20, job_id: 5)

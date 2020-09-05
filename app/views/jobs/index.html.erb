@@ -1,4 +1,6 @@
+<%= link_to "登録画面へ", new_job_path %>
 <h1>ジョブリスト一覧</h1>
   <% @jobs.each do |job| %>
     <p><%= job.name %>：<%= job.skill %></p>
+    <%= link_to "詳細", skill_path(job) %>
   <% end %>

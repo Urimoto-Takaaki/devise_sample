@@ -1,0 +1,8 @@
+<p>新ジョブ追加</p>
+<%= form_with model: @job, local: true do |f|%>
+  <p>ジョブ名:<%= f.text_field :name %></p>
+  <p>スキル:<%= f.text_field :skill %></p>
+  <p>HP:<%= f.text_field :life %></p>
+  <p>戦闘力:<%= f.text_field :power %></p>
+  <%= f.submit "登録" %>
+<% end %>
