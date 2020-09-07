@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_action :move_to_index, except: :index
+
   def index
     @jobs = Job.all
   end
@@ -8,9 +10,12 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(job_params)
+    Job.create(name: job_params[:name], life: job_params[:life], power: job_params[:power], skill: job_params[:skill], user_id: current_user.id)
   end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 
   private
   def job_params

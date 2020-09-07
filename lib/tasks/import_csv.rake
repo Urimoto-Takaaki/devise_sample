@@ -11,7 +11,8 @@ namespace :import_csv do
         name: row["name"],
         life: row["life"],
         power: row["power"],
-        skill: row["skill"]
+        skill: row["skill"],
+        user_id: row["user_id"]
       }
     end
     puts "インポート開始"

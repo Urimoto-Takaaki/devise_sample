@@ -5,3 +5,4 @@
     <p><%= "#{@job.name}は#{skill.power}を与えた" %></p>
     <!--<%= link_to "削除", skill_path(skill), method: :delete, data: {confirm: "削除しますか?"} %>-->
   <% end %>
+  <%= link_to "戻る←", user_path(current_user.id)%>

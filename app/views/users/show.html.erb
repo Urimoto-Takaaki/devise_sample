@@ -1,0 +1,4 @@
+<% @user.jobs.each do |job| %>
+  <p><%= job.name %>：<%= job.skill %></p>
+  <%= link_to "詳細", skill_path(job) %>
+<% end %>
