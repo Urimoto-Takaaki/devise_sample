@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
   <%= link_to "登録画面へ", new_job_path %> 
   <% @jobs.each do |job| %>
-    <p><%= job.name %>：<%= job.skill %>:<%= job.user.id %></p>  
+    <p><%= job.name %>：<%= job.skill %>:<%= job.user.nickname.present? ? "プレイヤー:#{job.user.nickname}" : "No.#{job.user.id}"%></p>  
   <% end %>
 <% else %>
     <p>ログインしてください</p>
